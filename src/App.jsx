@@ -47,7 +47,7 @@ const App = () => {
 
 
      {/* About Section */}
-<section id="about" className="py-20 px-10 bg-white text-center md:text-start flex flex-col md:flex-row items-center gap-10">
+<section id="about" className="py-40 px-10 bg-white text-center md:text-start flex flex-col md:flex-row items-center gap-10">
   {/* Profile Image */}
   <div className="flex-shrink-0">
     <img
