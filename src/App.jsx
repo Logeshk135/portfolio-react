@@ -2,7 +2,7 @@ import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiMenu, HiX } from "react-icons/hi";
 import { useState } from "react";
-import profile from "./assets/profile.jpg";
+import profile from "./assets/Profile.jpg";
 
 
 const App = () => {
