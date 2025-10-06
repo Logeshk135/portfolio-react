@@ -132,15 +132,6 @@ const App = () => {
         <p className="text-lg mb-4">
           Want to collaborate or hire me? Reach out anytime!
         </p>
-        <p className="text-lg">
-          📧{" "}
-          <a
-            href="mailto: logeshk135@gmail.com"
-            className="text-blue-600 underline"
-          >
-            logeshk135@gmail.com
-          </a>
-        </p>
       </section>
 
       {/* Footer */}
