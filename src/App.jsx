@@ -106,7 +106,7 @@ const App = () => {
       <h3 className="text-2xl font-bold mb-2">Pizza Ordering Website</h3>
       <p>
         A pizza ordering web app built using HTML, CSS (Frontend) with full
-        CRUD functionality. {click ---box}
+        CRUD functionality. click ---box 
       </p>
     </a>
 
@@ -119,8 +119,7 @@ const App = () => {
     >
       <h3 className="text-2xl font-bold mb-2">Mens Shop Website</h3>
       <p>
-        A completed React project mens shop website (frontend only).
-        {click ---box}
+        A completed React project mens shop website (frontend only). click ---box
       </p>
     </a>
   </div>
