@@ -112,7 +112,7 @@ const App = () => {
 
     {/* Project 2 */}
     <a
-      href="https://your-mens-shop-link.com"
+      href="https://mens-shop-react-7qgw.vercel.app/"
       target="_blank"
       rel="noopener noreferrer"
       className="block bg-purple-500 text-white rounded-xl shadow-lg p-6 hover:scale-105 transition"
