@@ -35,7 +35,7 @@ const App = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <ul className="flex flex-col mt-4 space-y-2 md:hidden bg-gray-800 p-4 rounded-lg sticky top-0 z-50 shadow-md ">
+        <ul className="flex flex-col mt-4 space-y-2 md:hidden bg-white-800 p-4 rounded-lg sticky top-0 z-50 shadow-md ">
           <li><a href="#about" className="hover:text-yellow-400 transition">About</a></li>
           <li><a href="#skills" className="hover:text-yellow-400 transition">Skills</a></li>
           <li><a href="#projects" className="hover:text-yellow-400 transition">Projects</a></li>
