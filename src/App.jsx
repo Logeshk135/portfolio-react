@@ -61,8 +61,8 @@ const App = () => {
         <div>
           <h2 className="text-3xl font-bold mb-6 text-gray-800">About Me</h2>
           <p className="text-lg leading-relaxed text-gray-700">
-            I’m Logesh Kumar, a passionate and motivated Full Stack Web Developer and BCA student (Batch 2022–2025) with a strong interest in building dynamic and user-focused web applications.
-            As a fresher, I have hands-on experience in developing responsive websites using HTML, CSS, JavaScript, React.js, Node.js, Express.js, and MongoDB. I enjoy learning new technologies,
+            I’m <b>Logesh K</b>, a passionate and motivated <b>Full Stack Web Developer</b> and <b>BCA Student (Batch 2022–2025)</b> with a strong interest in building dynamic and user-focused web applications.
+            As a fresher, I have hands-on experience in developing responsive websites using <b>HTML, CSS, JavaScript, React.js, Node.js, Express.js,</b> and <b>MongoDB</b>. I enjoy learning new technologies,
              solving problems, and turning creative ideas into real-world digital solutions.
             I’m constantly exploring modern development practices to enhance my skills and stay updated with the latest industry trends. My focus is on writing clean, efficient code and building applications that offer great performance and usability.
           </p>
