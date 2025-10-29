@@ -70,30 +70,18 @@ const App = () => {
       </section>
 
       <section id="skills" className="py-30 px-10 bg-red-400 text-center">
-            <div className="mt-10">
-          <h3 className="text-2xl font-semibold text-gray-900 mb-4">Technical Skills</h3>
-
-          <div className="grid md:grid-cols-2 gap-6 text-gray-700">
-            <div>
-              <h4 className="font-bold text-blue-600 mb-2">Frontend</h4>
-              <p>HTML, CSS, JavaScript, React.js, Tailwind CSS</p>
-            </div>
-
-            <div>
-              <h4 className="font-bold text-blue-600 mb-2">Backend</h4>
-              <p>Node.js, Express.js</p>
-            </div>
-
-            <div>
-              <h4 className="font-bold text-blue-600 mb-2">Database</h4>
-              <p>MongoDB</p>
-            </div>
-
-            <div>
-              <h4 className="font-bold text-blue-600 mb-2">Tools</h4>
-              <p>Git, GitHub, VS Code, Postman</p>
-            </div>
-          </div>
+        <h2 className="text-3xl font-bold mb-6 text-gray-800">My Skills</h2>
+        <div className="flex flex-wrap justify-center gap-6">
+          {["HTML", "CSS", "JavaScript", "C++", "React.js", "MySql", "Tailwind CSS", "Mongodb"].map(
+            (skill) => (
+              <div
+                key={skill}
+                className="bg-white shadow-md px-6 py-3 rounded-lg text-lg font-semibold hover:bg-yellow-100 transition"
+              >
+                {skill}
+              </div>
+            )
+          )}
         </div>
       </section>
 
