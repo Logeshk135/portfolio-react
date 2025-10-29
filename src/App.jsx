@@ -59,23 +59,13 @@ const App = () => {
 
         {/* About Text */}
         <div>
-           <h2 className="text-3xl font-bold text-gray-900 mb-6 border-b-4 border-blue-500 inline-block">
-          About Me
-        </h2>
-
-        <p className="text-lg text-gray-700 leading-relaxed mb-6">
-          I’m <span className="font-semibold text-blue-600">Logesh Kumar</span>, 
-          a passionate and motivated <span className="font-semibold">Full Stack Web Developer</span> 
-          and <span className="font-semibold">BCA student (Batch 2022–2025)</span> with a strong
-          interest in building dynamic and user-focused web applications.
-        </p>
-
-        <p className="text-lg text-gray-700 leading-relaxed mb-6">
-          I have hands-on experience developing responsive web applications using 
-          modern technologies like <strong>React.js, Node.js, Express.js,</strong> and <strong>MongoDB</strong>. 
-          I love solving problems, exploring new tools, and creating efficient digital solutions that
-          deliver great performance and usability.
-        </p>
+          <h2 className="text-3xl font-bold mb-6 text-gray-800">About Me</h2>
+          <p className="text-lg leading-relaxed text-gray-700">
+            I’m <b>Logesh K</b>, a passionate and motivated <b>Full Stack Web Developer</b> and <b>BCA Student (Batch 2022–2025)</b> with a strong interest in building dynamic and user-focused web applications.
+            As a fresher, I have hands-on experience in developing responsive websites using <b>HTML, CSS, JavaScript, React.js, Node.js, Express.js,</b> and <b>MongoDB</b>. I enjoy learning new technologies,
+             solving problems, and turning creative ideas into real-world digital solutions.
+            I’m constantly exploring modern development practices to enhance my skills and stay updated with the latest industry trends. My focus is on writing clean, efficient code and building applications that offer great performance and usability.
+          </p>
         </div>
       </section>
 
