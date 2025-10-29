@@ -74,12 +74,10 @@ const App = () => {
   </div>
 </section>
 
-
-      {/* Skills Section */}
       <section id="skills" className="py-30 px-10 bg-red-400 text-center">
         <h2 className="text-3xl font-bold mb-6 text-gray-800">My Skills</h2>
         <div className="flex flex-wrap justify-center gap-6">
-          {["HTML", "CSS", "JavaScript","C++","React.js", "Tailwind CSS"].map(
+          {["HTML", "CSS", "JavaScript","C++","React.js","MySql","Tailwind CSS","Mongodb"].map(
             (skill) => (
               <div
                 key={skill}
@@ -92,11 +90,10 @@ const App = () => {
         </div>
       </section>
 
-      {/* Projects Section */}
 <section id="projects" className="py-30 px-10 bg-white text-center">
   <h2 className="text-3xl font-bold mb-6 text-gray-800">My Projects</h2>
   <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-    {/* Project 1 */}
+
     <a
       href="https://logeshk135.github.io/pizza-webisite-forntend/"
       target="_blank"
@@ -110,7 +107,6 @@ const App = () => {
       </p>
     </a>
 
-    {/* Project 2 */}
     <a
       href="https://mens-shop-react-7qgw.vercel.app/"
       target="_blank"
