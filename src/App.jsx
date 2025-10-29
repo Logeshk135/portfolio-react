@@ -72,7 +72,7 @@ const App = () => {
       <section id="skills" className="py-30 px-10 bg-red-400 text-center">
         <h2 className="text-3xl font-bold mb-6 text-gray-800">My Skills</h2>
         <div className="flex flex-wrap justify-center gap-6">
-          {["HTML", "CSS", "JavaScript", "C++", "React.js", "MySql", "Tailwind CSS", "Mongodb"].map(
+          {["HTML", "CSS", "JavaScript", "C++", "React.js", "MySql", "Tailwind CSS","Node.js","Express.js", "Mongodb"].map(
             (skill) => (
               <div
                 key={skill}
