@@ -205,7 +205,7 @@ const App = () => {
             <img src={pizzaImg} alt="Pizza Ordering" className="w-full h-52 object-cover" />
             <div className="p-6">
               <h3 className="text-2xl font-bold mb-2">🍕 Pizza Ordering Website</h3>
-              <p>A responsive CRUD pizza ordering app built using HTML, CSS, and JS.</p>
+              <p>A responsive CRUD pizza ordering app built using HTML, CSS.</p>
             </div>
           </a>
 
