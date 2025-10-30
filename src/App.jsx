@@ -48,34 +48,63 @@ const App = () => {
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-6 text-lg font-bold">
+        <ul className="hidden md:flex space-x-6 text-lg font-bold sticky top-0 z-50 scroll-smooth">
           {["home", "about", "skills", "projects", "resume", "contact"].map((item) => (
             <li key={item}>
-              <a href={`#${item}`} className="hover:text-yellow-400 transition">
+              <a href={`#${item}`} className="hover:text-yellow-400  transition">
                 {item.charAt(0).toUpperCase() + item.slice(1)}
               </a>
             </li>
           ))}
         </ul>
 
-        {/* Mobile Menu Button */}
-        <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
-          {menuOpen ? <HiX size={30} /> : <HiMenu size={30} />}
-        </button>
-      </header>
+   
+  {/* 🌙 Mobile Menu Button */}
+<button
+  className="md:hidden"
+  onClick={() => {
+    setMenuOpen(!menuOpen);
+    // 🧠 Disable/enable background scroll when menu is open
+    if (!menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }}
+  aria-label="Toggle menu"
+>
+  {menuOpen ? <HiX size={30} /> : <HiMenu size={30} />}
+</button>
+</header>
 
-      {/* ✅ MOBILE MENU */}
-      {menuOpen && (
-        <ul className="flex flex-col bg-black text-white p-4 space-y-3 md:hidden text-center font-bold">
-          {["home", "about", "skills", "projects", "resume", "contact"].map((item) => (
-            <li key={item}>
-              <a href={`#${item}`} onClick={() => setMenuOpen(false)}>
-                {item.charAt(0).toUpperCase() + item.slice(1)}
-              </a>
-            </li>
-          ))}
-        </ul>
-      )}
+{/* ✅ MOBILE MENU - Fixed below header */}
+<div
+  className={`md:hidden fixed top-[64px] left-0 w-full bg-black text-white transition-all duration-500 ease-in-out z-40 ${
+    menuOpen ? "max-h-96 py-4 opacity-100" : "max-h-0 py-0 opacity-0"
+  }`}
+>
+  <ul className="flex flex-col items-start px-6 space-y-3 font-bold text-lg">
+    {["home", "about", "skills", "projects", "resume", "contact"].map((item) => (
+      <li key={item}>
+        <a
+          href={`#${item}`}
+          className="block hover:text-yellow-400 transition"
+          onClick={() => {
+            setMenuOpen(false);
+            document.body.style.overflow = "auto"; // restore scroll
+            setTimeout(() => {
+              const section = document.querySelector(`#${item}`);
+              if (section) section.scrollIntoView({ behavior: "smooth" });
+            }, 200);
+          }}
+        >
+          {item.charAt(0).toUpperCase() + item.slice(1)}
+        </a>
+      </li>
+    ))}
+  </ul>
+</div>
+
 
       {/* ✅ HOME SECTION */}
       <section id="home" className="bg-cyan-950 text-white min-h-screen flex flex-col md:flex-row items-center justify-center px-8 md:px-16 text-center md:text-left">
