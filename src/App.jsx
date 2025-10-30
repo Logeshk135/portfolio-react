@@ -234,10 +234,7 @@ const App = () => {
       {/* ✅ CONTACT SECTION */}
       <section id="contact" className="bg-red-950 text-white py-20 px-6 text-center">
         <h2 className="text-4xl font-bold mb-6 border-b-4 border-gray-400 inline-block pb-2">Contact</h2>
-        <p className="text-lg mb-4">I'm a <span className="font-semibold">fresher</span> passionate about web
-          development and eager to learn new technologies.
-          If you think I’d be a great fit for your team or have any suggestions,
-          feel free to contact me below.</p>
+        <p className="text-lg mb-4">Feel free to reach out for collaboration or opportunities!</p>
 
         <div className="text-gray-300 text-lg space-y-2">
           <p>Email: <a href="mailto:logeshk135@gmail.com" className="text-blue-400 hover:underline">logeshk135@gmail.com</a></p>
