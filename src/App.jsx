@@ -39,7 +39,7 @@ const App = () => {
   return (
     <div className="bg-gradient-to-br from-yellow-50 to-orange-100 text-gray-900 font-sans scroll-smooth">
       {/* ✅ HEADER */}
-      <header className="bg-black text-white py-4 px-6 flex justify-between items-center sticky top-0 z-50 shadow-lg">
+      <header className="bg-[#4B502F] text-white py-4 px-6 flex justify-between items-center sticky top-0 z-50 shadow-lg">
         <div className="flex items-center gap-2">
           <img src={logo} alt="Logo" className="w-10 h-10 rounded-full border-2 border-yellow-400" />
           <h1 className="text-2xl font-bold tracking-wide">
@@ -79,7 +79,7 @@ const App = () => {
 
       {/* ✅ MOBILE MENU - Semi Transparent & Always on Top */}
       <div
-        className={`md:hidden fixed top-[64px] left-0 w-full backdrop-blur-md bg-black/90 text-white transition-all duration-500 ease-in-out z-[999] ${menuOpen
+        className={`md:hidden fixed top-[64px] left-0 w-full backdrop-blur-md bg-[#4B502F]/90 text-white transition-all duration-500 ease-in-out z-[999] ${menuOpen
           ? "max-h-96 py-4 opacity-100 pointer-events-auto"
           : "max-h-0 py-0 opacity-0 pointer-events-none"
           }`}
@@ -111,52 +111,16 @@ const App = () => {
       {/* ✅ HOME SECTION FIXED */}
       <section
         id="home"
-        className="bg-[#006D77] rgb(0, 109, 199) hsl(186, 100%, 23%) text-white min-h-screen flex flex-col md:flex-row items-center justify-center px-8 md:px-16 text-center md:text-left relative overflow-hidden"
+        className="bg-[#3b411f] text-white min-h-screen flex flex-col md:flex-row items-center justify-center px-8 md:px-16 text-center md:text-left relative overflow-hidden"
       >
         {/* LEFT TEXT */}
         <div className="flex-1 space-y-6 relative z-[40]">
           <h1 className="text-4xl md:text-6xl font-bold">
-            Hi, <br /> <span>I'm </span><spam className="text-[#AAAA00]">L</spam>O<spam className="text-[#AAAA00]">G</spam>ESH K
+            Hi, <br /> <span>I'm LOGESH K</span>
           </h1>
           <p className="text-lg md:text-2xl  font-semibold">
-            <span className="text-red-900">Full-Stack Developer</span> | <span className="text-red-800"> MERN</span> |<span className="text-red-700"> BCA 2025 </span>
+            <span className="text-amber-600">Full-Stack Developer</span> | <span className="text-amber-500"> MERN</span> |<span className="text-amber-300"> BCA 2025 </span>
           </p>
-
-          {/* ✅ Social Icons — Clickable now */}
-          <div className="flex justify-center  text-black md:justify-start gap-6 text-3xl mt-6 space-y-6 relative z-40">
-            <a
-              href="mailto:logeshk135@gmail.com"
-              className="hover:text-yellow-400 transition hover:scale-125"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaEnvelope />
-            </a>
-            <a
-              href="https://linkedin.com/in/logeshk135"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-700 transition hover:scale-125"
-            >
-              <FaLinkedin />
-            </a>
-            <a
-              href="https://github.com/logeshk135"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-gray-300 transition hover:scale-125"
-            >
-              <FaGithub />
-            </a>
-            <a
-              href="https://wa.me/918825696584"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-green-900 transition hover:scale-125"
-            >
-              <FaWhatsapp />
-            </a>
-          </div>
 
           <a
         href="#projects"
@@ -179,7 +143,7 @@ const App = () => {
 
 
       {/* ✅ ABOUT SECTION */}
-      <section id="about" className="py-20 px-8 bg-white text-center md:text-left flex flex-col md:flex-row items-center gap-10">
+      <section id="about" className="py-20 px-8 bg-amber-100 text-center md:text-left flex flex-col md:flex-row items-center gap-10">
         <img src={profile} alt="Profile" className="w-60 md:w-72 rounded-3xl border-4 border-yellow-400 shadow-lg" />
         <div className="flex-1">
           <center><h2 className="text-3xl font-bold mb-6 text-black">About Me</h2></center>
@@ -192,7 +156,7 @@ const App = () => {
       </section>
 
       {/* ✅ SKILLS SECTION */}
-      <section id="skills" className="py-20 px-6 bg-gray-500 text-center">
+      <section id="skills" className="py-20 px-6 bg-[#9AB45C] text-center">
         <h2 className="text-3xl font-bold mb-10 text-black">Technical Skills</h2>
         <div className="flex flex-wrap justify-center gap-8">
           {skills.map((skill, i) => (
@@ -205,7 +169,7 @@ const App = () => {
       </section>
 
       {/* ✅ PROJECTS SECTION */}
-      <section id="projects" className="py-20 px-6 bg-white text-center">
+      <section id="projects" className="py-20 px-6 bg-amber-100 text-center">
         <h2 className="text-3xl font-bold mb-10 text-black">My Projects</h2>
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           <a href="https://logeshk135.github.io/pizza-webisite-forntend/" target="_blank" className="bg-gradient-to-r from-red-500 to-orange-400 text-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
@@ -227,7 +191,7 @@ const App = () => {
       </section>
 
       {/* ✅ RESUME SECTION */}
-      <section id="resume" className="bg-[#0a0325] text-white py-20 px-6 text-center">
+      <section id="resume" className="bg-[#1A2E35] text-white py-20 px-6 text-center">
         <h2 className="text-4xl font-bold mb-4">Resume</h2>
         <p className="text-gray-300 mb-10">View or download my resume below 👇</p>
         <div className="flex flex-col md:flex-row justify-center items-center gap-10">
@@ -239,14 +203,14 @@ const App = () => {
       </section>
 
       {/* ✅ CONTACT SECTION */}
-      <section id="contact" className="bg-red-950 text-white py-20 px-6 text-center">
-        <h2 className="text-4xl font-bold mb-6 border-b-4 border-gray-400 inline-block pb-2">Contact</h2>
-        <p className="text-lg mb-4">Feel free to reach out for collaboration or opportunities!</p>
+      <section id="contact" className="bg-[#857a71] text-black py-20 px-6 text-center">
+        <h2 className="text-4xl font-bold mb-6 border-b-4 border-black inline-block pb-2">Contact</h2>
+        <p className="text-2xl mb-4 ">Feel free to reach out for collaboration or opportunities!</p>
 
         <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-10">
           {/* Email */}
           <div className="flex items-center gap-4">
-            <div className="text-white">
+            <div className="text-maroon-700">
               <i className="fas fa-envelope text-2xl"></i>
             </div>
             <a
@@ -259,7 +223,7 @@ const App = () => {
 
           {/* Phone */}
           <div className="flex items-center gap-4">
-            <div className="text-white">
+            <div className="text-maroon-700">
               <i className="fas fa-phone-alt text-2xl"></i>
             </div>
             <a
@@ -275,14 +239,14 @@ const App = () => {
         <div className="flex justify-center gap-6 text-3xl mt-8">
           <a href="mailto:logeshk135@gmail.com" className="hover:text-yellow-400 transition hover:scale-125"><FaEnvelope /></a>
           <a href="https://linkedin.com/in/logeshk135" target="_blank" className="hover:text-blue-400 transition hover:scale-125"><FaLinkedin /></a>
-          <a href="https://github.com/logeshk135" target="_blank" className="hover:text-gray-300 transition hover:scale-125"><FaGithub /></a>
+          <a href="https://github.com/logeshk135" target="_blank" className="hover:text-gray-700 transition hover:scale-125"><FaGithub /></a>
           <a href="https://wa.me/918825696584" target="_blank" className="hover:text-green-400 transition hover:scale-125"><FaWhatsapp /></a>
         </div>
       </section>
 
       {/* ✅ FOOTER */}
-      <footer className="bg-black text-white py-6 text-center">
-        <p className="text-sm text-gray-400">© 2025 Logesh K — All Rights Reserved</p>
+      <footer className="bg-[#4B502F] text-black py-6 text-center">
+        <p className="text-sm">© 2025 Logesh K — All Rights Reserved</p>
       </footer>
     </div>
   );
