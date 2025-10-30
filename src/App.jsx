@@ -43,7 +43,7 @@ const App = () => {
         <div className="flex items-center gap-2">
           <img src={logo} alt="Logo" className="w-10 h-10 rounded-full border-2 border-yellow-400" />
           <h1 className="text-2xl font-bold tracking-wide">
-            <span className="text-yellow-400">L</span>O<span className="text-yellow-400">G</span>ESH K
+            <span className="text-[#AAAA00]">L</span>O<span className="text-[#AAAA00]">G</span>ESH K
           </h1>
         </div>
 
@@ -111,19 +111,19 @@ const App = () => {
       {/* ✅ HOME SECTION FIXED */}
       <section
         id="home"
-        className="bg-cyan-950 text-white min-h-screen flex flex-col md:flex-row items-center justify-center px-8 md:px-16 text-center md:text-left relative overflow-hidden"
+        className="bg-[#006D77] rgb(0, 109, 199) hsl(186, 100%, 23%) text-white min-h-screen flex flex-col md:flex-row items-center justify-center px-8 md:px-16 text-center md:text-left relative overflow-hidden"
       >
         {/* LEFT TEXT */}
         <div className="flex-1 space-y-6 relative z-[40]">
           <h1 className="text-4xl md:text-6xl font-bold">
-            Hi, <br /> <span className="text-yellow-400">I'm Logesh K</span>
+            Hi, <br /> <span>I'm </span><spam className="text-[#AAAA00]">L</spam>O<spam className="text-[#AAAA00]">G</spam>ESH K
           </h1>
-          <p className="text-lg md:text-xl text-gray-200 font-light">
-            Full-Stack Developer | MERN | BCA 2025
+          <p className="text-lg md:text-2xl  font-semibold">
+            <span className="text-red-900">Full-Stack Developer</span> | <span className="text-red-800"> MERN</span> |<span className="text-red-700"> BCA 2025 </span>
           </p>
 
           {/* ✅ Social Icons — Clickable now */}
-          <div className="flex justify-center md:justify-start gap-6 text-3xl mt-6 space-y-6 relative z-40">
+          <div className="flex justify-center  text-black md:justify-start gap-6 text-3xl mt-6 space-y-6 relative z-40">
             <a
               href="mailto:logeshk135@gmail.com"
               className="hover:text-yellow-400 transition hover:scale-125"
@@ -136,7 +136,7 @@ const App = () => {
               href="https://linkedin.com/in/logeshk135"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-blue-400 transition hover:scale-125"
+              className="hover:text-blue-700 transition hover:scale-125"
             >
               <FaLinkedin />
             </a>
@@ -152,11 +152,18 @@ const App = () => {
               href="https://wa.me/918825696584"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-green-400 transition hover:scale-125"
+              className="hover:text-green-900 transition hover:scale-125"
             >
               <FaWhatsapp />
             </a>
           </div>
+
+          <a
+        href="#projects"
+        className="bg-blue-950 text-white font-semibold py-2 px-6 rounded-full hover:bg-red-600 transition-all"
+      >
+        View My Work
+      </a>
         </div>
 
         {/* ✅ Right Image - Adjusted for mobile */}
@@ -175,7 +182,7 @@ const App = () => {
       <section id="about" className="py-20 px-8 bg-white text-center md:text-left flex flex-col md:flex-row items-center gap-10">
         <img src={profile} alt="Profile" className="w-60 md:w-72 rounded-3xl border-4 border-yellow-400 shadow-lg" />
         <div className="flex-1">
-          <center><h2 className="text-3xl font-bold mb-6 text-gray-800">About Me</h2></center>
+          <center><h2 className="text-3xl font-bold mb-6 text-black">About Me</h2></center>
           <p className="text-lg text-gray-700 text-justify leading-relaxed">
             I’m <b>Logesh K</b>, a passionate and motivated <b>Full Stack Web Developer</b> and <b>BCA Student (Batch 2022–2025)</b> with a strong interest in building dynamic and user-focused web applications.
             As a fresher, I have hands-on experience in developing responsive websites using <b>HTML, CSS, JavaScript, React.js, Node.js, Express.js, and MongoDB</b>. I enjoy learning new technologies, solving problems, and turning creative ideas into real-world digital solutions.
@@ -185,8 +192,8 @@ const App = () => {
       </section>
 
       {/* ✅ SKILLS SECTION */}
-      <section id="skills" className="py-20 px-6 bg-gray-100 text-center">
-        <h2 className="text-3xl font-bold mb-10 text-gray-800">Technical Skills</h2>
+      <section id="skills" className="py-20 px-6 bg-gray-500 text-center">
+        <h2 className="text-3xl font-bold mb-10 text-black">Technical Skills</h2>
         <div className="flex flex-wrap justify-center gap-8">
           {skills.map((skill, i) => (
             <div key={i} className="flex flex-col items-center bg-white shadow-lg rounded-xl px-6 py-5 w-28 sm:w-32 hover:scale-105 transition">
@@ -199,7 +206,7 @@ const App = () => {
 
       {/* ✅ PROJECTS SECTION */}
       <section id="projects" className="py-20 px-6 bg-white text-center">
-        <h2 className="text-3xl font-bold mb-10 text-gray-800">My Projects</h2>
+        <h2 className="text-3xl font-bold mb-10 text-black">My Projects</h2>
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           <a href="https://logeshk135.github.io/pizza-webisite-forntend/" target="_blank" className="bg-gradient-to-r from-red-500 to-orange-400 text-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
             <img src={pizzaImg} alt="Pizza Ordering" className="w-full h-52 object-cover" />
@@ -209,7 +216,7 @@ const App = () => {
             </div>
           </a>
 
-          <a href="https://mens-shop-react-7qgw.vercel.app/" target="_blank" className="bg-gradient-to-r from-purple-600 to-indigo-500 text-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
+          <a href="https://mens-shop-react-7qgw.vercel.app/" target="_blank" className="bg-gradient-to-r from-red-800 to-red-500 text-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
             <img src={shopImg} alt="Men's Shop" className="w-full h-52 object-cover" />
             <div className="p-6">
               <h3 className="text-2xl font-bold mb-2">🛍️ Men’s Shop Website</h3>
@@ -220,7 +227,7 @@ const App = () => {
       </section>
 
       {/* ✅ RESUME SECTION */}
-      <section id="resume" className="bg-[#0e0536] text-white py-20 px-6 text-center">
+      <section id="resume" className="bg-[#0a0325] text-white py-20 px-6 text-center">
         <h2 className="text-4xl font-bold mb-4">Resume</h2>
         <p className="text-gray-300 mb-10">View or download my resume below 👇</p>
         <div className="flex flex-col md:flex-row justify-center items-center gap-10">
