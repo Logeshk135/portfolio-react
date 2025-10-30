@@ -58,75 +58,118 @@ const App = () => {
           ))}
         </ul>
 
-   
-  {/* 🌙 Mobile Menu Button */}
-<button
-  className="md:hidden"
-  onClick={() => {
-    setMenuOpen(!menuOpen);
-    // 🧠 Disable/enable background scroll when menu is open
-    if (!menuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-  }}
-  aria-label="Toggle menu"
->
-  {menuOpen ? <HiX size={30} /> : <HiMenu size={30} />}
-</button>
-</header>
 
-{/* ✅ MOBILE MENU - Fixed below header */}
-<div
-  className={`md:hidden fixed top-[64px] left-0 w-full bg-black text-white transition-all duration-500 ease-in-out z-40 ${
-    menuOpen ? "max-h-96 py-4 opacity-100" : "max-h-0 py-0 opacity-0"
-  }`}
->
-  <ul className="flex flex-col items-start px-6 space-y-3 font-bold text-lg">
-    {["home", "about", "skills", "projects", "resume", "contact"].map((item) => (
-      <li key={item}>
-        <a
-          href={`#${item}`}
-          className="block hover:text-yellow-400 transition"
+        {/* 🌙 Mobile Menu Button */}
+        <button
+          className="md:hidden"
           onClick={() => {
-            setMenuOpen(false);
-            document.body.style.overflow = "auto"; // restore scroll
-            setTimeout(() => {
-              const section = document.querySelector(`#${item}`);
-              if (section) section.scrollIntoView({ behavior: "smooth" });
-            }, 200);
+            setMenuOpen(!menuOpen);
+            // 🧠 Disable/enable background scroll when menu is open
+            if (!menuOpen) {
+              document.body.style.overflow = "hidden";
+            } else {
+              document.body.style.overflow = "auto";
+            }
           }}
+          aria-label="Toggle menu"
         >
-          {item.charAt(0).toUpperCase() + item.slice(1)}
-        </a>
-      </li>
-    ))}
-  </ul>
-</div>
+          {menuOpen ? <HiX size={30} /> : <HiMenu size={30} />}
+        </button>
+      </header>
+
+      {/* ✅ MOBILE MENU - Semi Transparent & Always on Top */}
+      <div
+        className={`md:hidden fixed top-[64px] left-0 w-full backdrop-blur-md bg-black/90 text-white transition-all duration-500 ease-in-out z-[999] ${menuOpen
+          ? "max-h-96 py-4 opacity-100 pointer-events-auto"
+          : "max-h-0 py-0 opacity-0 pointer-events-none"
+          }`}
+      >
+        <ul className="flex flex-col items-start px-6 space-y-3 font-bold text-lg">
+          {["home", "about", "skills", "projects", "resume", "contact"].map((item) => (
+            <li key={item}>
+              <a
+                href={`#${item}`}
+                className="block hover:text-yellow-400 transition"
+                onClick={() => {
+                  setMenuOpen(false);
+                  document.body.style.overflow = "auto";
+                  setTimeout(() => {
+                    const section = document.querySelector(`#${item}`);
+                    if (section) section.scrollIntoView({ behavior: "smooth" });
+                  }, 200);
+                }}
+              >
+                {item.charAt(0).toUpperCase() + item.slice(1)}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
 
 
-      {/* ✅ HOME SECTION */}
-      <section id="home" className="bg-cyan-950 text-white min-h-screen flex flex-col md:flex-row items-center justify-center px-8 md:px-16 text-center md:text-left">
-        <div className="flex-1 space-y-6">
+
+      {/* ✅ HOME SECTION FIXED */}
+      <section
+        id="home"
+        className="bg-cyan-950 text-white min-h-screen flex flex-col md:flex-row items-center justify-center px-8 md:px-16 text-center md:text-left relative overflow-hidden"
+      >
+        {/* LEFT TEXT */}
+        <div className="flex-1 space-y-6 relative z-[40]">
           <h1 className="text-4xl md:text-6xl font-bold">
             Hi, <br /> <span className="text-yellow-400">I'm Logesh K</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-200 font-light">Full-Stack Developer | MERN | BCA 2025</p>
+          <p className="text-lg md:text-xl text-gray-200 font-light">
+            Full-Stack Developer | MERN | BCA 2025
+          </p>
 
-          {/* Icons */}
-          <div className="flex justify-center md:justify-start gap-6 text-3xl mt-6">
-            <a href="mailto:logeshk135@gmail.com" className="hover:text-yellow-400 transition hover:scale-125"><FaEnvelope /></a>
-            <a href="https://linkedin.com/in/logeshk135" target="_blank" className="hover:text-blue-400 transition hover:scale-125"><FaLinkedin /></a>
-            <a href="https://github.com/logeshk135" target="_blank" className="hover:text-gray-300 transition hover:scale-125"><FaGithub /></a>
-            <a href="https://wa.me/918825696584" target="_blank" className="hover:text-green-400 transition hover:scale-125"><FaWhatsapp /></a>
+          {/* ✅ Social Icons — Clickable now */}
+          <div className="flex justify-center md:justify-start gap-6 text-3xl mt-6 space-y-6 relative z-40">
+            <a
+              href="mailto:logeshk135@gmail.com"
+              className="hover:text-yellow-400 transition hover:scale-125"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaEnvelope />
+            </a>
+            <a
+              href="https://linkedin.com/in/logeshk135"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-blue-400 transition hover:scale-125"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href="https://github.com/logeshk135"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gray-300 transition hover:scale-125"
+            >
+              <FaGithub />
+            </a>
+            <a
+              href="https://wa.me/918825696584"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-green-400 transition hover:scale-125"
+            >
+              <FaWhatsapp />
+            </a>
           </div>
         </div>
 
-        <div className="flex-1 flex justify-center mt-10 md:mt-0">
-          <img src={animat} alt="Animation" className="w-72 md:w-[420px] rounded-3xl shadow-2xl animate-pulse" />
+        {/* ✅ Right Image - Adjusted for mobile */}
+        <div className="flex-1 flex justify-center md:justify-end mt-4 md:mt-0 relative z-10">
+          <img
+            src={animat}
+            alt="Animation"
+            className="w-64 md:w-[420px] rounded-3xl shadow-2xl md:-translate-x-6 animate-float transform -translate-y-6 md:translate-y-0 transition-all duration-500"
+          />
         </div>
+
       </section>
+
 
       {/* ✅ ABOUT SECTION */}
       <section id="about" className="py-20 px-8 bg-white text-center md:text-left flex flex-col md:flex-row items-center gap-10">
