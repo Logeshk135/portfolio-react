@@ -236,10 +236,34 @@ const App = () => {
         <h2 className="text-4xl font-bold mb-6 border-b-4 border-gray-400 inline-block pb-2">Contact</h2>
         <p className="text-lg mb-4">Feel free to reach out for collaboration or opportunities!</p>
 
-        <div className="text-gray-300 text-lg space-y-2">
-          <p>Email: <a href="mailto:logeshk135@gmail.com" className="text-blue-400 hover:underline">logeshk135@gmail.com</a></p>
-          <p>Phone: <a href="tel:+918825696584" className="text-blue-400 hover:underline">+91 8825696584</a></p>
+        <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-10">
+          {/* Email */}
+          <div className="flex items-center gap-4">
+            <div className="text-white">
+              <i className="fas fa-envelope text-2xl"></i>
+            </div>
+            <a
+              href="mailto:logeshk135@gmail.com"
+              className="text-lg hover:text-yellow-400 transition-all"
+            >
+              logeshk135@gmail.com
+            </a>
+          </div>
+
+          {/* Phone */}
+          <div className="flex items-center gap-4">
+            <div className="text-white">
+              <i className="fas fa-phone-alt text-2xl"></i>
+            </div>
+            <a
+              href="tel:+918825696584"
+              className="text-lg hover:text-yellow-400 transition-all"
+            >
+              +91 88256 96584
+            </a>
+          </div>
         </div>
+
 
         <div className="flex justify-center gap-6 text-3xl mt-8">
           <a href="mailto:logeshk135@gmail.com" className="hover:text-yellow-400 transition hover:scale-125"><FaEnvelope /></a>
