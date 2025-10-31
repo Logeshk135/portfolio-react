@@ -39,7 +39,7 @@ const App = () => {
   return (
     <div className="bg-gradient-to-br from-yellow-50 to-orange-100 text-gray-900 font-sans scroll-smooth">
       {/* ✅ HEADER */}
-      <header className="bg-gradient-to-r from-[#5B0E2D] via-[#923232] to-[#F28B82] text-white py-4 px-6 flex justify-between items-center sticky top-0 z-50 shadow-lg">
+      <header className="bg-[#610303] text-white py-4 px-6 flex justify-between items-center sticky top-0 z-50 shadow-lg">
         <div className="flex items-center gap-2">
           <img src={logo} alt="Logo" className="w-10 h-10 rounded-full border-2 border-yellow-400" />
           <h1 className="text-2xl font-bold tracking-wide">
@@ -79,7 +79,7 @@ const App = () => {
 
       {/* ✅ MOBILE MENU - Semi Transparent & Always on Top */}
       <div
-        className={`md:hidden fixed top-[64px] left-0 w-full backdrop-blur-md bg-gradient-to-r from-[#5B0E2D] via-[#923232] to-[#F28B82]/90 text-white transition-all duration-500 ease-in-out z-[999] ${menuOpen
+        className={`md:hidden fixed top-[64px] left-0 w-full backdrop-blur-md bg-[#800000]/90 text-white transition-all duration-500 ease-in-out z-[999] ${menuOpen
           ? "max-h-96 py-4 opacity-100 pointer-events-auto"
           : "max-h-0 py-0 opacity-0 pointer-events-none"
           }`}
@@ -111,7 +111,7 @@ const App = () => {
       {/* ✅ HOME SECTION FIXED */}
       <section
         id="home"
-        className="bg-gradient-to-r from-[#5B0E2D] via-[#923232] to-[#F28B82] text-white min-h-screen flex flex-col md:flex-row items-center justify-center px-8 md:px-16 text-center md:text-left relative overflow-hidden"
+        className="bg-[#500e0e] text-white min-h-screen flex flex-col md:flex-row items-center justify-center px-8 md:px-16 text-center md:text-left relative overflow-hidden"
       >
         {/* LEFT TEXT */}
         <div className="flex-1 space-y-6 relative z-[40]">
@@ -124,7 +124,7 @@ const App = () => {
 
           <a
         href="#projects"
-        className="bg-pink-950 text-white font-semibold py-2 px-6 rounded-full hover:bg-pink-500 transition-all"
+        className="bg-yellow-700 text-white font-semibold py-2 px-6 rounded-full hover:bg-yellow-500 transition-all"
       >
         View My Work
       </a>
@@ -143,7 +143,7 @@ const App = () => {
 
 
       {/* ✅ ABOUT SECTION */}
-      <section id="about" className="py-20 px-8 bg-[#EDEDED]  text-justify md:text-left flex flex-col md:flex-row items-center gap-10">
+      <section id="about" className="py-20 px-8 bg-white  text-justify md:text-left flex flex-col md:flex-row items-center gap-10">
         <img src={profile} alt="Profile" className="w-60 md:w-72 rounded-3xl border-4 border-yellow-400 shadow-lg" />
         <div className="flex-1">
           <center><h2 className="text-3xl font-bold mb-6 text-black">About Me</h2></center>
@@ -156,7 +156,7 @@ const App = () => {
       </section>
 
       {/* ✅ SKILLS SECTION */}
-      <section id="skills" className="py-20 px-6 bg-[#F5F5F5] text-center">
+      <section id="skills" className="py-20 px-6 bg-white text-center">
         <h2 className="text-3xl font-bold mb-10 text-black">Technical Skills</h2>
         <div className="flex flex-wrap justify-center gap-8">
           {skills.map((skill, i) => (
@@ -169,7 +169,7 @@ const App = () => {
       </section>
 
       {/* ✅ PROJECTS SECTION */}
-      <section id="projects" className="py-20 px-6 bg-[#FFFFFF] text-center">
+      <section id="projects" className="py-20 px-6 bg-white text-center">
         <h2 className="text-3xl font-bold mb-10 text-black">My Projects</h2>
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           <a href="https://logeshk135.github.io/pizza-webisite-forntend/" target="_blank" className="bg-gradient-to-r from-red-500 to-orange-400 text-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
@@ -191,7 +191,7 @@ const App = () => {
       </section>
 
       {/* ✅ RESUME SECTION */}
-      <section id="resume" className="bg-[#1A2E35] text-white py-20 px-6 text-center">
+      <section id="resume" className="bg-[#741212] text-white py-20 px-6 text-center">
         <h2 className="text-4xl font-bold mb-4">Resume</h2>
         <p className="text-gray-300 mb-10">View or download my resume below 👇</p>
         <div className="flex flex-col md:flex-row justify-center items-center gap-10">
@@ -203,8 +203,8 @@ const App = () => {
       </section>
 
       {/* ✅ CONTACT SECTION */}
-      <section id="contact" className="bg-amber-200 text-black py-20 px-6 text-center">
-        <h2 className="text-4xl font-bold mb-6 border-b-4 border-black inline-block pb-2">Contact</h2>
+      <section id="contact" className="bg-red-700 text-white py-20 px-6 text-center">
+        <h2 className="text-4xl font-bold mb-6  inline-block pb-2">Contact</h2>
         <p className="text-xl mb-4 ">Feel free to reach out for collaboration or opportunities!</p>
 
         <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-10">
@@ -228,7 +228,7 @@ const App = () => {
             </div>
             <a
               href="tel:+918825696584"
-              className="text-lg hover:text-2xl text-neutral-950 font-bold transition-all"
+              className="text-lg hover:text-2xl font-bold transition-all"
             >
               +91 88256 96584
             </a>
@@ -245,7 +245,7 @@ const App = () => {
       </section>
 
       {/* ✅ FOOTER */}
-      <footer className="bg-gradient-to-r from-[#5B0E2D] via-[#923232] to-[#F28B82] text-black py-6 text-center">
+      <footer className="bg-[#610303] text-white py-6 text-center">
         <p className="text-sm">© 2025 Logesh K — All Rights Reserved</p>
       </footer>
     </div>
