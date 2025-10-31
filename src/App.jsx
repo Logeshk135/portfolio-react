@@ -39,11 +39,11 @@ const App = () => {
   return (
     <div className="bg-gradient-to-br from-yellow-50 to-orange-100 text-gray-900 font-sans scroll-smooth">
       {/* ✅ HEADER */}
-      <header className="bg-[#4B502F] text-white py-4 px-6 flex justify-between items-center sticky top-0 z-50 shadow-lg">
+      <header className="bg-gradient-to-r from-[#5B0E2D] via-[#923232] to-[#F28B82] text-white py-4 px-6 flex justify-between items-center sticky top-0 z-50 shadow-lg">
         <div className="flex items-center gap-2">
           <img src={logo} alt="Logo" className="w-10 h-10 rounded-full border-2 border-yellow-400" />
           <h1 className="text-2xl font-bold tracking-wide">
-            <span className="text-[#AAAA00]">L</span>O<span className="text-[#AAAA00]">G</span>ESH K
+            <span>L</span><span className="text-yellow-400">O</span><span>G</span><span className="text-yellow-300">ESH K</span>
           </h1>
         </div>
 
@@ -79,7 +79,7 @@ const App = () => {
 
       {/* ✅ MOBILE MENU - Semi Transparent & Always on Top */}
       <div
-        className={`md:hidden fixed top-[64px] left-0 w-full backdrop-blur-md bg-[#4B502F]/90 text-white transition-all duration-500 ease-in-out z-[999] ${menuOpen
+        className={`md:hidden fixed top-[64px] left-0 w-full backdrop-blur-md bg-gradient-to-r from-[#5B0E2D] via-[#923232] to-[#F28B82]/90 text-white transition-all duration-500 ease-in-out z-[999] ${menuOpen
           ? "max-h-96 py-4 opacity-100 pointer-events-auto"
           : "max-h-0 py-0 opacity-0 pointer-events-none"
           }`}
@@ -111,20 +111,20 @@ const App = () => {
       {/* ✅ HOME SECTION FIXED */}
       <section
         id="home"
-        className="bg-[#3b411f] text-white min-h-screen flex flex-col md:flex-row items-center justify-center px-8 md:px-16 text-center md:text-left relative overflow-hidden"
+        className="bg-gradient-to-r from-[#5B0E2D] via-[#923232] to-[#F28B82] text-white min-h-screen flex flex-col md:flex-row items-center justify-center px-8 md:px-16 text-center md:text-left relative overflow-hidden"
       >
         {/* LEFT TEXT */}
         <div className="flex-1 space-y-6 relative z-[40]">
           <h1 className="text-4xl md:text-6xl font-bold">
-            Hi, <br /> <span>I'm LOGESH K</span>
+            Hi, <br /> <span>I'm</span> <span>L</span><span className="text-yellow-400">O</span><span>G</span><span className="text-yellow-300">ESH K</span>
           </h1>
           <p className="text-lg md:text-2xl  font-semibold">
-            <span className="text-amber-600">Full-Stack Developer</span> | <span className="text-amber-500"> MERN</span> |<span className="text-amber-300"> BCA 2025 </span>
+            <span className="text-2xl text-shadow-white">Full-Stack Developer</span> | <span className="text-xl text-shadow-white"> MERN</span> |<span className="text-lg text-white"> BCA 2025 </span>
           </p>
 
           <a
         href="#projects"
-        className="bg-blue-950 text-white font-semibold py-2 px-6 rounded-full hover:bg-red-600 transition-all"
+        className="bg-pink-950 text-white font-semibold py-2 px-6 rounded-full hover:bg-pink-500 transition-all"
       >
         View My Work
       </a>
@@ -143,20 +143,20 @@ const App = () => {
 
 
       {/* ✅ ABOUT SECTION */}
-      <section id="about" className="py-20 px-8 bg-amber-100 text-center md:text-left flex flex-col md:flex-row items-center gap-10">
+      <section id="about" className="py-20 px-8 bg-[#EDEDED]  text-justify md:text-left flex flex-col md:flex-row items-center gap-10">
         <img src={profile} alt="Profile" className="w-60 md:w-72 rounded-3xl border-4 border-yellow-400 shadow-lg" />
         <div className="flex-1">
           <center><h2 className="text-3xl font-bold mb-6 text-black">About Me</h2></center>
-          <p className="text-lg text-gray-700 text-justify leading-relaxed">
+          <span className="text-lg text-gray-700 text-justify leading-relaxed">
             I’m <b>Logesh K</b>, a passionate and motivated <b>Full Stack Web Developer</b> and <b>BCA Student (Batch 2022–2025)</b> with a strong interest in building dynamic and user-focused web applications.
             As a fresher, I have hands-on experience in developing responsive websites using <b>HTML, CSS, JavaScript, React.js, Node.js, Express.js, and MongoDB</b>. I enjoy learning new technologies, solving problems, and turning creative ideas into real-world digital solutions.
             I’m constantly exploring modern development practices to enhance my skills and stay updated with the latest industry trends. My focus is on writing clean, efficient code and building applications that offer great performance and usability.
-          </p>
+          </span>
         </div>
       </section>
 
       {/* ✅ SKILLS SECTION */}
-      <section id="skills" className="py-20 px-6 bg-[#9AB45C] text-center">
+      <section id="skills" className="py-20 px-6 bg-[#F5F5F5] text-center">
         <h2 className="text-3xl font-bold mb-10 text-black">Technical Skills</h2>
         <div className="flex flex-wrap justify-center gap-8">
           {skills.map((skill, i) => (
@@ -169,7 +169,7 @@ const App = () => {
       </section>
 
       {/* ✅ PROJECTS SECTION */}
-      <section id="projects" className="py-20 px-6 bg-amber-100 text-center">
+      <section id="projects" className="py-20 px-6 bg-[#FFFFFF] text-center">
         <h2 className="text-3xl font-bold mb-10 text-black">My Projects</h2>
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           <a href="https://logeshk135.github.io/pizza-webisite-forntend/" target="_blank" className="bg-gradient-to-r from-red-500 to-orange-400 text-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition">
@@ -203,9 +203,9 @@ const App = () => {
       </section>
 
       {/* ✅ CONTACT SECTION */}
-      <section id="contact" className="bg-[#857a71] text-black py-20 px-6 text-center">
+      <section id="contact" className="bg-amber-200 text-black py-20 px-6 text-center">
         <h2 className="text-4xl font-bold mb-6 border-b-4 border-black inline-block pb-2">Contact</h2>
-        <p className="text-2xl mb-4 ">Feel free to reach out for collaboration or opportunities!</p>
+        <p className="text-xl mb-4 ">Feel free to reach out for collaboration or opportunities!</p>
 
         <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-10">
           {/* Email */}
@@ -215,7 +215,7 @@ const App = () => {
             </div>
             <a
               href="mailto:logeshk135@gmail.com"
-              className="text-lg hover:text-yellow-400 transition-all"
+              className="text-lg hover:text-2xl  transition-all"
             >
               logeshk135@gmail.com
             </a>
@@ -228,7 +228,7 @@ const App = () => {
             </div>
             <a
               href="tel:+918825696584"
-              className="text-lg hover:text-yellow-400 transition-all"
+              className="text-lg hover:text-2xl text-neutral-950 font-bold transition-all"
             >
               +91 88256 96584
             </a>
@@ -245,7 +245,7 @@ const App = () => {
       </section>
 
       {/* ✅ FOOTER */}
-      <footer className="bg-[#4B502F] text-black py-6 text-center">
+      <footer className="bg-gradient-to-r from-[#5B0E2D] via-[#923232] to-[#F28B82] text-black py-6 text-center">
         <p className="text-sm">© 2025 Logesh K — All Rights Reserved</p>
       </footer>
     </div>
