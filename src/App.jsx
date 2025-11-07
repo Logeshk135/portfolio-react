@@ -1,19 +1,9 @@
 import React, { useState } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaEnvelope,
-  FaWhatsapp,
-  FaHtml5,
-  FaCss3Alt,
-  FaReact,
-  FaNodeJs,
-  FaDatabase,
-} from "react-icons/fa";
-import { SiMongodb, SiJavascript, SiTailwindcss, SiExpress } from "react-icons/si";
+import { FaHtml5, FaCss3Alt, FaReact, FaNodeJs, FaDatabase, FaGithub, FaEnvelope, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { SiJavascript, SiTailwindcss, SiMongodb, SiExpress, SiGit, SiVercel } from "react-icons/si";
 import { HiMenu, HiX } from "react-icons/hi";
-
+import vscodeImg from "./assets/vscode.png";
 import profile from "./assets/Profile.jpg";
 import resume from "./assets/resume.pdf";
 import logo from "./assets/logo.jpg";
@@ -34,7 +24,13 @@ const App = () => {
     { name: "MongoDB", icon: <SiMongodb className="text-green-600 text-4xl" /> },
     { name: "MySQL", icon: <FaDatabase className="text-blue-700 text-4xl" /> },
     { name: "Tailwind CSS", icon: <SiTailwindcss className="text-sky-400 text-4xl" /> },
+    { name: "Git", icon: <SiGit className="text-orange-600 text-4xl" /> },
+    { name: "GitHub", icon: <FaGithub className="text-gray-800 text-4xl" /> },
+    { name: "VS Code", icon: <img src={vscodeImg} alt="VS Code" className="w-10 h-10" /> },
+    { name: "Vercel", icon: <SiVercel className="text-black text-4xl" /> },
+
   ];
+
 
   return (
     <div className="bg-gradient-to-br from-yellow-50 to-orange-100 text-gray-900 font-sans scroll-smooth">
@@ -123,11 +119,11 @@ const App = () => {
           </p>
 
           <a
-        href="#projects"
-        className="bg-yellow-700 text-white font-semibold py-2 px-6 rounded-full hover:bg-yellow-500 transition-all"
-      >
-        View My Work
-      </a>
+            href="#projects"
+            className="bg-yellow-700 text-white font-semibold py-2 px-6 rounded-full hover:bg-yellow-500 transition-all"
+          >
+            View My Work
+          </a>
         </div>
 
         {/* ✅ Right Image - Adjusted for mobile */}
@@ -143,17 +139,34 @@ const App = () => {
 
 
       {/* ✅ ABOUT SECTION */}
-      <section id="about" className="py-20 px-8 bg-white  text-justify md:text-left flex flex-col md:flex-row items-center gap-10">
-        <img src={profile} alt="Profile" className="w-60 md:w-72 rounded-3xl border-4 border-yellow-400 shadow-lg" />
-        <div className="flex-1">
-          <center><h2 className="text-3xl font-bold mb-6 text-black">About Me</h2></center>
-          <span className="text-lg text-gray-700 text-justify leading-relaxed">
-            I’m <b>Logesh K</b>, a passionate and motivated <b>Full Stack Web Developer</b> and <b>BCA Student (Batch 2022–2025)</b> with a strong interest in building dynamic and user-focused web applications.
-            As a fresher, I have hands-on experience in developing responsive websites using <b>HTML, CSS, JavaScript, React.js, Node.js, Express.js, and MongoDB</b>. I enjoy learning new technologies, solving problems, and turning creative ideas into real-world digital solutions.
-            I’m constantly exploring modern development practices to enhance my skills and stay updated with the latest industry trends. My focus is on writing clean, efficient code and building applications that offer great performance and usability.
-          </span>
-        </div>
-      </section>
+      <section
+  id="about"
+  className="py-20 px-8 bg-white flex flex-col md:flex-row items-center gap-10"
+>
+  <img
+    src={profile}
+    alt="Profile"
+    className="w-60 md:w-72 rounded-3xl border-4 border-yellow-400 shadow-lg"
+  />
+  <div className="flex-1">
+    <h2 className="text-3xl font-bold mb-6 text-black text-center md:text-left">
+      About Me
+    </h2>
+    <p className="text-lg text-gray-700 leading-relaxed text-justify">
+      I’m <b>Logesh K</b>, a passionate and motivated <b>Full Stack Web Developer</b> and
+      <b> BCA Student (Batch 2022–2025)</b> with a strong interest in building dynamic and
+      user-focused web applications.
+      As a fresher, I have hands-on experience in developing responsive websites using
+      <b> HTML, CSS, JavaScript, React.js, Node.js, Express.js, and MongoDB</b>. I enjoy
+      learning new technologies, solving problems, and turning creative ideas into
+      real-world digital solutions.
+      I’m constantly exploring modern development practices to enhance my skills and
+      stay updated with the latest industry trends. My focus is on writing clean,
+      efficient code and building applications that offer great performance and usability.
+    </p>
+  </div>
+</section>
+
 
       {/* ✅ SKILLS SECTION */}
       <section id="skills" className="py-20 px-6 bg-white text-center">
@@ -167,6 +180,7 @@ const App = () => {
           ))}
         </div>
       </section>
+
 
       {/* ✅ PROJECTS SECTION */}
       <section id="projects" className="py-20 px-6 bg-white text-center">
@@ -190,31 +204,31 @@ const App = () => {
         </div>
       </section>
 
-     {/* ✅ RESUME SECTION */}
-<section id="resume" className="bg-[#741212] text-white py-20 px-6 text-center">
-  <h2 className="text-4xl font-bold mb-4">Resume</h2>
-  <p className="text-gray-300 mb-10">View or download my resume below 👇</p>
+      {/* ✅ RESUME SECTION */}
+      <section id="resume" className="bg-[#741212] text-white py-20 px-6 text-center">
+        <h2 className="text-4xl font-bold mb-4">Resume</h2>
+        <p className="text-gray-300 mb-10">View or download my resume below 👇</p>
 
-  <div className="flex flex-col md:flex-row justify-center items-center gap-10">
-    <object
-      data={resume}
-      type="application/pdf"
-      width="50%"
-      height="500px"
-      className="rounded-lg shadow-2xl border border-gray-400"
-    ></object>
+        <div className="flex flex-col md:flex-row justify-center items-center gap-10">
+          <object
+            data={resume}
+            type="application/pdf"
+            width="50%"
+            height="500px"
+            className="rounded-lg shadow-2xl border border-gray-400"
+          ></object>
 
-    <div className="flex flex-col gap-4">
-      <a
-        href={resume}
-        download="LogeshK_Resume.pdf"
-        className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium shadow-md transition"
-      >
-        Download Resume
-      </a>
-    </div>
-  </div>
-</section>
+          <div className="flex flex-col gap-4">
+            <a
+              href={resume}
+              download="LogeshK_Resume.pdf"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium shadow-md transition"
+            >
+              Download Resume
+            </a>
+          </div>
+        </div>
+      </section>
 
 
       {/* ✅ CONTACT SECTION */}
