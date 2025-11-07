@@ -199,7 +199,7 @@ const App = () => {
     <object
       data={resume}
       type="application/pdf"
-      width="25%"
+      width="50%"
       height="500px"
       className="rounded-lg shadow-2xl border border-gray-400"
     ></object>
