@@ -190,17 +190,32 @@ const App = () => {
         </div>
       </section>
 
-      {/* ✅ RESUME SECTION */}
-      <section id="resume" className="bg-[#741212] text-white py-20 px-6 text-center">
-        <h2 className="text-4xl font-bold mb-4">Resume</h2>
-        <p className="text-gray-300 mb-10">View or download my resume below 👇</p>
-        <div className="flex flex-col md:flex-row justify-center items-center gap-10">
-          <object data={resume} type="application/pdf" width="320" height="450" className="rounded-lg shadow-2xl"></object>
-          <a href={resume} download="LogeshK_Resume.pdf" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium shadow-md transition">
-            Download Resume
-          </a>
-        </div>
-      </section>
+     {/* ✅ RESUME SECTION */}
+<section id="resume" className="bg-[#741212] text-white py-20 px-6 text-center">
+  <h2 className="text-4xl font-bold mb-4">Resume</h2>
+  <p className="text-gray-300 mb-10">View or download my resume below 👇</p>
+
+  <div className="flex flex-col md:flex-row justify-center items-center gap-10">
+    <object
+      data={resume}
+      type="application/pdf"
+      width="25%"
+      height="500px"
+      className="rounded-lg shadow-2xl border border-gray-400"
+    ></object>
+
+    <div className="flex flex-col gap-4">
+      <a
+        href={resume}
+        download="LogeshK_Resume.pdf"
+        className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium shadow-md transition"
+      >
+        Download Resume
+      </a>
+    </div>
+  </div>
+</section>
+
 
       {/* ✅ CONTACT SECTION */}
       <section id="contact" className="bg-red-700 text-white py-20 px-6 text-center">
